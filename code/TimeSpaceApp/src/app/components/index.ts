@@ -17,3 +17,7 @@ export * from './users';
 export * from './presence';
 export * from './settings';
 export * from './shared';
+
+export * from './users/users.module';
+export * from './presence/presence.module';
+export * from './settings/settings.module';
