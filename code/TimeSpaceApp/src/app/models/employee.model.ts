@@ -8,7 +8,7 @@ export interface Employee {
     State: string;
     Fax: string;
     ReferenceId: number;
-    Birth: Date;
+    Birth: string;
     Occupation: string;
     Unit3: string;
     Unit2: string;
