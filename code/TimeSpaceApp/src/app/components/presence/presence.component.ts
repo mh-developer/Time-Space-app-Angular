@@ -38,6 +38,7 @@ export class PresenceComponent implements OnInit, OnDestroy {
             .subscribe((item: Employee[]) => {
                 this.employees = item;
                 this.loading = false;
-            });
+            },
+            () => this.loading = false);
     }
 }
