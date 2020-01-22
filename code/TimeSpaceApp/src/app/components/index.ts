@@ -21,3 +21,4 @@ export * from './shared';
 export * from './users/users.module';
 export * from './presence/presence.module';
 export * from './settings/settings.module';
+export * from './shared/shared.module';

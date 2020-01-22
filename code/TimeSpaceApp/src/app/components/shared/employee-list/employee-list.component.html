@@ -1,1 +1,20 @@
-<p>employee-list works!</p>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First name</th>
+                <th scope="col">Last name</th>
+                <th scope="col">Organizational unit id</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees; index as i; trackBy: trackById">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ employee.FirstName }}</td>
+                <td>{{ employee.LastName }}</td>
+                <td>{{ employee.OrganizationalUnitId }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
