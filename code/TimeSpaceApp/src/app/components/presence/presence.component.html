@@ -1,1 +1,12 @@
-<p>presence works!</p>
+
+<div class="mt-5">
+    <div class="mb-2">
+        <button class="btn btn-primary" type="button" (click)="reloadPresence()" [disabled]="loading">
+            <span *ngIf="loading" class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+            Reload
+          </button>
+    </div>
+
+    <app-employee-list [employees]="employees"></app-employee-list>
+
+</div>
