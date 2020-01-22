@@ -1,6 +1,7 @@
 import { EmployeeListComponent } from './components/shared/employee-list/employee-list.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { TokenGuard } from './services';
 
 
 const routes: Routes = [
@@ -11,8 +12,7 @@ const routes: Routes = [
     },
     {
         path: 'home',
-        // loadChildren: () => import(`./components`).then(m => m.UsersComponent)
-        component: EmployeeListComponent
+        loadChildren: () => import(`./components`).then(m => m.SettingsModule)
     },
     {
         path: 'settings',
@@ -20,16 +20,19 @@ const routes: Routes = [
     },
     {
         path: 'users',
+        canActivate: [TokenGuard],
         loadChildren: () => import(`./components`).then(m => m.UsersModule)
     },
     {
         path: 'presence',
+        canActivate: [TokenGuard],
         loadChildren: () => import(`./components`).then(m => m.PresenceModule)
     },
-    // {
-    //     path: '**',
-    //     loadChildren: () => import(`./components`).then(m => m.UsersComponent)
-    // }
+    {
+        path: '**',
+        redirectTo: '/home',
+        pathMatch: 'full'
+    }
 ];
 
 @NgModule({

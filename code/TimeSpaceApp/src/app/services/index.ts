@@ -1,15 +1,18 @@
 import { EmployeeService } from './employee';
-import { PersenceService } from './persence';
+import { PresenceService } from './presence';
 import { SettingsService } from './settings';
 
 
-export const components: any[] = [
+export const services: any[] = [
     EmployeeService,
-    PersenceService,
+    PresenceService,
     SettingsService
 ];
 
 
 export * from './employee';
-export * from './persence';
+export * from './presence';
 export * from './settings';
+export * from './api-service';
+export * from './interceptors';
+export * from './guards';

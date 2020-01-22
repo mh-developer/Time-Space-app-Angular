@@ -1,1 +1,1 @@
-export const models: any[] = [];
+export * from './employee.model';

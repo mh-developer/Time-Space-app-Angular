@@ -64,7 +64,8 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "TimeSpaceApp:build"
+                        "browserTarget": "TimeSpaceApp:build",
+                        "proxyConfig": "src/proxy.conf.json"
                     },
                     "configurations": {
                         "production": {
@@ -90,7 +91,8 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "src/styles.css"
+                            "src/assets/css/bootstrap.min.css",
+                            "src/assets/css/styles.css"
                         ],
                         "scripts": []
                     }
