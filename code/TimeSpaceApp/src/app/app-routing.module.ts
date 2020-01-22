@@ -7,12 +7,8 @@ import { TokenGuard } from './services';
 const routes: Routes = [
     {
         path: '',
-        redirectTo: '/home',
+        redirectTo: '/settings',
         pathMatch: 'full'
-    },
-    {
-        path: 'home',
-        loadChildren: () => import(`./components`).then(m => m.SettingsModule)
     },
     {
         path: 'settings',
@@ -30,7 +26,7 @@ const routes: Routes = [
     },
     {
         path: '**',
-        redirectTo: '/home',
+        redirectTo: '/settings',
         pathMatch: 'full'
     }
 ];
