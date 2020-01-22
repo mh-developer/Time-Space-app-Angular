@@ -1,0 +1,26 @@
+<div class="card mt-5">
+    <div class="card-header">Add employee</div>
+    <div class="card-body m-3">
+        <div *ngIf="!success" class="alert alert-danger" role="alert">
+            Error, try again!
+        </div>
+
+        <form [formGroup]="employeeForm" (ngSubmit)="submit(employeeForm.value)">
+            <div class="form-group">
+                <label for="FirstName">First name</label>
+                <input type="text" formControlName="FirstName" class="form-control" id="FirstName" placeholder="First name" required>
+            </div>
+            <div class="form-group">
+                <label for="LastName">Last name</label>
+                <input type="text" formControlName="LastName" class="form-control" id="LastName" placeholder="Last name" required>
+            </div>
+            <div class="form-group">
+                <label for="OrganizationalUnitId">Organizational unit id</label>
+                <input type="number" formControlName="OrganizationalUnitId" class="form-control" id="OrganizationalUnitId" placeholder="Organizational unit id" required>
+            </div>
+
+            <input type="submit" value="Add employee" class="btn btn-primary mb-2" [disabled]="!employeeForm.valid">
+            <a routerLink="../" role="button" class="btn btn-danger mb-2 ml-2">Cancel</a>
+        </form>
+    </div>
+</div>

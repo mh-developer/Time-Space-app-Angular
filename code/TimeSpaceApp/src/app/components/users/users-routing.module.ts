@@ -7,6 +7,10 @@ const routes: Routes = [
     {
         path: '',
         component: fromUsers.UsersComponent
+    },
+    {
+        path: 'add',
+        component: fromUsers.UserAddComponent
     }
 ];
 

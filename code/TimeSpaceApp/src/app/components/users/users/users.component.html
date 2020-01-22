@@ -1,0 +1,10 @@
+
+<div class="mt-5">
+
+    <a routerLink="/users/add" role="button" class="btn btn-primary mb-2">Add</a>
+
+    <app-users-search [allEmployees]="allEmployees" (filteredEmployees)='search($event)'></app-users-search>
+
+    <app-employee-list [employees]="employees"></app-employee-list>
+
+</div>
