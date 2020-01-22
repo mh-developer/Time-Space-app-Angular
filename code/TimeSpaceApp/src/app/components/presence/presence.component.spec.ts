@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { PresenceComponent } from './presence.component';
+import { EmployeeListComponent } from '..';
 
 describe('PresenceComponent', () => {
     let component: PresenceComponent;
@@ -9,7 +10,10 @@ describe('PresenceComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [PresenceComponent],
+            declarations: [
+                PresenceComponent,
+                EmployeeListComponent
+            ],
             imports: [
                 HttpClientTestingModule
             ]
