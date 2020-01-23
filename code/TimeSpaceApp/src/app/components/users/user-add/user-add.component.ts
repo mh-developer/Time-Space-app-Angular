@@ -28,7 +28,6 @@ export class UserAddComponent implements OnInit {
     }
 
     submit(formData): void {
-        console.log(formData);
         this.employeeService
             .put(formData as Employee)
             .subscribe(

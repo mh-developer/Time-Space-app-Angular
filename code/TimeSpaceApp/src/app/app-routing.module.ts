@@ -1,4 +1,3 @@
-import { EmployeeListComponent } from './components/shared/employee-list/employee-list.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TokenGuard } from './services';
@@ -12,17 +11,20 @@ const routes: Routes = [
     },
     {
         path: 'settings',
-        loadChildren: () => import(`./components`).then(m => m.SettingsModule)
+        loadChildren: './components/settings/settings.module#SettingsModule',
+        // loadChildren: () => import(`./components`).then(m => m.SettingsModule),
     },
     {
         path: 'users',
         canActivate: [TokenGuard],
-        loadChildren: () => import(`./components`).then(m => m.UsersModule)
+        loadChildren: './components/users/users.module#UsersModule',
+        // loadChildren: () => import(`./components/users/users.module`).then(m => m.UsersModule),
     },
     {
         path: 'presence',
         canActivate: [TokenGuard],
-        loadChildren: () => import(`./components`).then(m => m.PresenceModule)
+        loadChildren: './components/presence/presence.module#PresenceModule',
+        // loadChildren: () => import(`./components/presence/presence.module`).then(m => m.PresenceModule),
     },
     {
         path: '**',

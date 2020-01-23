@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  BASE_URL: 'http://rdweb.spica.com:5213/timeapi'
+  BASE_URL: 'http://localhost:4200/timeapi'
 };
